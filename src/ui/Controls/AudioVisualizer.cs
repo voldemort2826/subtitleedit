@@ -79,6 +79,7 @@ namespace Nikse.SubtitleEdit.Controls
         public int ClosenessForBorderSelection { get; set; } = 15;
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float SpectrogramAlpha { get; set; } = 1.0f;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int WaveformAlpha { get; set; } = 255;
         private const int MinimumSelectionMilliseconds = 100;
 
@@ -128,11 +129,17 @@ namespace Nikse.SubtitleEdit.Controls
 
         private double _wholeParagraphMinMilliseconds;
         private double _wholeParagraphMaxMilliseconds = double.MaxValue;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Keys InsertAtVideoPositionShortcut { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Keys Move100MsLeft { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Keys Move100MsRight { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Keys MoveOneSecondLeft { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Keys MoveOneSecondRight { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool MouseWheelScrollUpIsForward { get; set; } = true;
 
         public const double ZoomMinimum = 0.1;
@@ -141,6 +148,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         public int ShotChangeSnapPixels = 8;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double ZoomFactor
         {
             get => _zoomFactor;
@@ -170,6 +178,7 @@ namespace Nikse.SubtitleEdit.Controls
         public const double VerticalZoomMaximum = 20.0;
         private double _verticalZoomFactor = 1.0; // 1.0=no zoom
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double VerticalZoomFactor
         {
             get => _verticalZoomFactor;
@@ -199,6 +208,10 @@ namespace Nikse.SubtitleEdit.Controls
         /// <summary>
         /// Shot changes (seconds)
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary>
+        /// Shot changes (seconds)
+        /// </summary>
         public List<double> ShotChanges
         {
             get => _shotChanges;
@@ -211,6 +224,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private MatroskaChapter[] _chapters = Array.Empty<MatroskaChapter>();
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public MatroskaChapter[] Chapters
         {
             get => _chapters;
@@ -225,6 +239,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private bool _showSpectrogram;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowSpectrogram
         {
             get => _showSpectrogram;
@@ -240,6 +255,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private bool _combineSpectrogramAndWaveform;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool CombineSpectrogramAndWaveform
         {
             get => _combineSpectrogramAndWaveform;
@@ -254,10 +270,12 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AllowOverlap { get; set; }
 
         private bool _showWaveform;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowWaveform
         {
             get => _showWaveform;
@@ -273,6 +291,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private double _startPositionSeconds;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double StartPositionSeconds
         {
             get => _startPositionSeconds;
@@ -299,25 +318,40 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Paragraph NewSelectionParagraph { get; set; }
         public Paragraph SelectedParagraph { get; private set; }
         public Paragraph RightClickedParagraph { get; private set; }
         public double RightClickedSeconds { get; private set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string WaveformNotLoadedText { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BackgroundColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color Color { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color SelectedColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ParagraphColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color TextColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color CursorColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ChaptersColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float TextSize { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool TextBold { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color GridColor { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowGridLines { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AllowNewSelection { get; set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool Locked { get; set; }
 
         public double EndPositionSeconds
@@ -333,6 +367,7 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public WavePeakData WavePeaks
         {
             get => _wavePeaks;

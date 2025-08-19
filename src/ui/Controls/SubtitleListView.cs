@@ -62,8 +62,10 @@ namespace Nikse.SubtitleEdit.Controls
         public string SubtitleFontName { get; set; } = "Tahoma";
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool SubtitleFontBold { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SubtitleFontSize { get; set; } = 8;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool UseSyntaxColoring { get; set; }
         private Settings _settings;
         private bool _saveColumnWidthChanges;
@@ -91,6 +93,7 @@ namespace Nikse.SubtitleEdit.Controls
         private readonly Timer _syntaxColorLineTimer;
         private readonly Timer _setStartAndDurationTimer;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int FirstVisibleIndex { get; set; } = -1;
 
         public void InitializeLanguage(LanguageStructure.General general, Settings settings)

@@ -19,6 +19,7 @@ namespace Nikse.SubtitleEdit.Forms.Assa
         public Subtitle NewSubtitle { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SsaStyle NewStorageStyle { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SsaStyle NewFileStyle { get; set; }
 
         public ReplaceStyleWith(List<SsaStyle> styles, List<SsaStyle> currentFileStyles, List<AssaStorageCategory> storageCategories, Subtitle subtitle)

@@ -52,7 +52,9 @@ namespace Nikse.SubtitleEdit.Forms.AudioToText
         public bool UnknownArgument { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool RunningOnCuda { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool IncompleteModel { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string IncompleteModelName { get; set; }
 
         private static bool? CudaSomeDevice { get; set; }

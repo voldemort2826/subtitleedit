@@ -38,6 +38,7 @@ namespace Nikse.SubtitleEdit.Forms
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int AudioTrackNumber { get; set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool OkPressed { get; set; }
 
         public double FrameRate => _videoInfo?.FramesPerSecond ?? 0;

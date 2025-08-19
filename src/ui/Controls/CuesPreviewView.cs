@@ -35,42 +35,49 @@ namespace Nikse.SubtitleEdit.Controls
             set { _previewText = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowShotChange
         {
             get => _showShotChange;
             set { _showShotChange = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int LeftGap
         {
             get => _leftGap;
             set { _leftGap = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int LeftRedZone
         {
             get => _leftRedZone;
             set { _leftRedZone = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int LeftGreenZone
         {
             get => _leftGreenZone;
             set { _leftGreenZone = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int RightGap
         {
             get => _rightGap;
             set { _rightGap = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int RightRedZone
         {
             get => _rightRedZone;
             set { _rightRedZone = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int RightGreenZone
         {
             get => _rightGreenZone;

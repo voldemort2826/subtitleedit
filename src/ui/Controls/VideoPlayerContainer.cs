@@ -114,7 +114,9 @@ namespace Nikse.SubtitleEdit.Controls
 
         public RichTextBoxViewOnly TextBox { get; private set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int VideoWidth { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int VideoHeight { get; set; }
 
         private bool _isMuted;
@@ -169,8 +171,10 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Bitmap _playerIcon;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public MatroskaChapter[] Chapters { get; set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public RightToLeft TextRightToLeft
         {
             get => TextBox.RightToLeft;
@@ -182,6 +186,7 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowStopButton
         {
             get => _pictureBoxStop.Visible || _pictureBoxStopOver.Visible || _pictureBoxStopDown.Visible;
@@ -199,6 +204,7 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowMuteButton
         {
             get => _pictureBoxMute.Visible || _pictureBoxMuteOver.Visible || _pictureBoxMuteDown.Visible;
@@ -216,6 +222,7 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowFullscreenButton
         {
             get => _pictureBoxFullscreen.Visible || _pictureBoxFullscreenOver.Visible || _pictureBoxFullscreenDown.Visible;
@@ -498,6 +505,7 @@ namespace Nikse.SubtitleEdit.Controls
             OnPlayerClicked?.Invoke(sender, e);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Paragraph LastParagraph { get; set; }
 
         public void SetSubtitleText(string text, Paragraph p, Subtitle subtitle, SubtitleFormat format)
@@ -746,6 +754,7 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string SubtitleText
         {
             get => _subtitleText;
@@ -1863,6 +1872,7 @@ namespace Nikse.SubtitleEdit.Controls
         /// </summary>
         public bool SmpteMode => Configuration.Settings.General.CurrentVideoIsSmpte;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool UsingFrontCenterAudioChannelOnly { get; set; } = false;
 
         public void RefreshProgressBar()
@@ -2065,6 +2075,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         public bool IsPaused => VideoPlayer?.IsPaused == true;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double Volume
         {
             get
@@ -2103,6 +2114,10 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        /// <summary>
+        /// Current position in seconds
+        /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         /// <summary>
         /// Current position in seconds
         /// </summary>

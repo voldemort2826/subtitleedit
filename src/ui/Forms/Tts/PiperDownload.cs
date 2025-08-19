@@ -17,7 +17,9 @@ namespace Nikse.SubtitleEdit.Forms.Tts
         public bool AutoClose { get; internal set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ModelUrl { get; internal set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ModelFileName { get; internal set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string PiperPath { get; set; }
 
         private readonly CancellationTokenSource _cancellationTokenSource;

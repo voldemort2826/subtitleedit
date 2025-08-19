@@ -12,9 +12,12 @@ namespace Nikse.SubtitleEdit.Forms
         public bool PasteAll { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool PasteTimeCodesOnly { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool PasteTextOnly { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool PasteOriginalTextOnly { get; set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool PasteOverwrite { get; set; }
 
         public ColumnPaste(bool isOriginalAvailable, bool onlyText)

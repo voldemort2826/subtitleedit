@@ -10,8 +10,11 @@ namespace Nikse.SubtitleEdit.Forms.AudioToText
         public bool AddPeriods { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool MergeLines { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool SplitLines { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool FixCasing { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool FixShortDuration { get; set; }
 
         public PostProcessingSettings()

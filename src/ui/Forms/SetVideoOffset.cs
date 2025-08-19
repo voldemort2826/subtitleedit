@@ -16,10 +16,12 @@ namespace Nikse.SubtitleEdit.Forms
         public bool FromCurrentVideoPosition { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DoNotaddVideoOffsetToTimeCodes { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool Reset { get; set; }
 
         private readonly TimeCode _videoOffset;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TimeCode VideoOffset
         {
             get => _videoOffset;

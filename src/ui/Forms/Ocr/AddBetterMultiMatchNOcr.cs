@@ -14,7 +14,9 @@ namespace Nikse.SubtitleEdit.Forms.Ocr
         public ImageSplitterItem ExpandItem { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int ExpandCount { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ExpandItalic { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ExpandText { get; set; }
 
         private NikseBitmap _wholeImage;

@@ -12,6 +12,7 @@ namespace Nikse.SubtitleEdit.Forms
         public bool SeekForward { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double SecondsDuration { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double VolumeBelow { get; set; }
 
         public SeekSilence()
