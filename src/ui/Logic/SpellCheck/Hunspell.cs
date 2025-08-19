@@ -14,17 +14,7 @@ namespace Nikse.SubtitleEdit.Logic.SpellCheck
                 return new VoikkoSpellCheck(Configuration.BaseDirectory, Configuration.DictionariesDirectory);
             }
 
-            if (Configuration.IsRunningOnLinux)
-            {
-                return new LinuxHunspell(dictionary + ".aff", dictionary + ".dic");
-            }
-
-            if (Configuration.IsRunningOnMac)
-            {
-                return new MacHunspell(dictionary + ".aff", dictionary + ".dic");
-            }
-
-            return new WindowsHunspell(dictionary + ".aff", dictionary + ".dic");
+            return new SpellCheckBase(dictionary + ".aff", dictionary + ".dic");
         }
 
         public abstract bool Spell(string word);

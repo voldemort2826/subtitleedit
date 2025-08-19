@@ -16,7 +16,6 @@
     <PackageVersion Include="NAudio.WinMM" Version="2.2.1" />
     <PackageVersion Include="NCalcSync" Version="5.6.0" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageVersion Include="NHunspell" Version="1.2.5554.16953" />
     <PackageVersion Include="System.Security.AccessControl" Version="6.0.1" />
     <PackageVersion Include="System.Security.Principal.Windows" Version="5.0.0" />
     <PackageVersion Include="Vosk" Version="0.3.38" />

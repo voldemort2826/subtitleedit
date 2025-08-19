@@ -308,7 +308,6 @@
         <PackageReference Include="NAudio.WinMM" />
         <PackageReference Include="NCalcSync" />
         <PackageReference Include="Newtonsoft.Json" />
-        <PackageReference Include="NHunspell" />
         <PackageReference Include="System.Resources.Extensions" />
         <PackageReference Include="System.Security.AccessControl" />
         <PackageReference Include="System.Security.Principal.Windows" />

@@ -6,26 +6,6 @@ namespace Nikse.SubtitleEdit.Logic
 {
     internal static class NativeMethods
     {
-
-        #region Hunspell
-
-        [DllImport("libhunspell", SetLastError = true, CharSet = CharSet.Ansi, BestFitMapping = false)]
-        internal static extern IntPtr Hunspell_create(string affpath, string dpath);
-
-        [DllImport("libhunspell")]
-        internal static extern IntPtr Hunspell_destroy(IntPtr hunspellHandle);
-
-        [DllImport("libhunspell", SetLastError = true, CharSet = CharSet.Ansi, BestFitMapping = false)]
-        internal static extern int Hunspell_spell(IntPtr hunspellHandle, string word);
-
-        [DllImport("libhunspell", SetLastError = true, CharSet = CharSet.Ansi, BestFitMapping = false)]
-        internal static extern int Hunspell_suggest(IntPtr hunspellHandle, IntPtr slst, string word);
-
-        [DllImport("libhunspell")]
-        internal static extern void Hunspell_free_list(IntPtr hunspellHandle, IntPtr slst, int n);
-
-        #endregion Hunspell
-
         #region Win32 API
 
         // Win32 API functions for dynamically loading DLLs
