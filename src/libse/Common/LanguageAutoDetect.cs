@@ -1808,10 +1808,6 @@ namespace Nikse.SubtitleEdit.Core.Common
                     {
                         encoding = Encoding.GetEncoding(12001); // UTF-32 (BE)
                     }
-                    else if (bom[0] == 0x2b && bom[1] == 0x2f && bom[2] == 0x76 && (bom[3] == 0x38 || bom[3] == 0x39 || bom[3] == 0x2b || bom[3] == 0x2f)) // utf-7
-                    {
-                        encoding = Encoding.UTF7;
-                    }
                     else if (file.Length > bom.Length)
                     {
                         long length = file.Length;

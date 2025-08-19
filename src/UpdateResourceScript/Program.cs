@@ -16,7 +16,7 @@ namespace UpdateResourceScript
 
         public static StringBuilder Append(this StringBuilder sb, string name, string value)
         {
-            return sb.AppendFormat("\nVALUE \"{0}\", \"{1}\"", name, value.Escape());
+            return sb.AppendFormat(CultureInfo.InvariantCulture, "\nVALUE \"{0}\", \"{1}\"", name, value.Escape());
         }
     }
 

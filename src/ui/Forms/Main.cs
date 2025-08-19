@@ -5244,7 +5244,7 @@ namespace Nikse.SubtitleEdit.Forms
                 // Seungki end
 
                 var currentEncoding = GetCurrentEncoding();
-                bool isUnicode = currentEncoding.Equals(Encoding.Unicode) || currentEncoding.Equals(Encoding.UTF32) || currentEncoding.Equals(Encoding.GetEncoding(12001)) || currentEncoding.Equals(Encoding.UTF7) || currentEncoding.Equals(Encoding.UTF8);
+                bool isUnicode = currentEncoding.Equals(Encoding.Unicode) || currentEncoding.Equals(Encoding.UTF32) || currentEncoding.Equals(Encoding.GetEncoding(12001)) || currentEncoding.Equals(Encoding.UTF8);
                 if (!isUnicode)
                 {
                     if (!skipPrompts && currentEncoding.GetString(currentEncoding.GetBytes(allText)) != allText)
@@ -5470,7 +5470,7 @@ namespace Nikse.SubtitleEdit.Forms
 
                 string allText = subAlt.ToText(format);
                 var currentEncoding = GetCurrentEncoding();
-                bool isUnicode = currentEncoding != null && (currentEncoding.Equals(Encoding.Unicode) || currentEncoding.Equals(Encoding.UTF32) || currentEncoding.Equals(Encoding.UTF7) || currentEncoding.Equals(Encoding.UTF8));
+                bool isUnicode = currentEncoding != null && (currentEncoding.Equals(Encoding.Unicode) || currentEncoding.Equals(Encoding.UTF32) || currentEncoding.Equals(Encoding.UTF8));
                 if (!skipPrompts && !isUnicode && currentEncoding.GetString(currentEncoding.GetBytes(allText)) != allText)
                 {
                     if (MessageBox.Show(string.Format(_language.UnicodeMusicSymbolsAnsiWarning), Title, MessageBoxButtons.YesNoCancel) != DialogResult.Yes)
@@ -18259,7 +18259,7 @@ namespace Nikse.SubtitleEdit.Forms
             else if (e.Modifiers == (Keys.Control | Keys.Alt | Keys.Shift) && e.KeyCode == Keys.W) // watermark
             {
                 var enc = GetCurrentEncoding();
-                if (enc != Encoding.UTF8 && enc != Encoding.UTF32 && enc != Encoding.Unicode && enc != Encoding.UTF7)
+                if (enc != Encoding.UTF8 && enc != Encoding.UTF32 && enc != Encoding.Unicode)
                 {
                     MessageBox.Show(LanguageSettings.Current.Watermark.ErrorUnicodeEncodingOnly);
                 }
@@ -22995,7 +22995,7 @@ namespace Nikse.SubtitleEdit.Forms
             get
             {
                 var enc = GetCurrentEncoding();
-                return enc == Encoding.UTF8 || enc == Encoding.Unicode || enc == Encoding.UTF7 || enc == Encoding.UTF32 || enc == Encoding.BigEndianUnicode;
+                return enc == Encoding.UTF8 || enc == Encoding.Unicode || enc == Encoding.UTF32 || enc == Encoding.BigEndianUnicode;
             }
         }
 
