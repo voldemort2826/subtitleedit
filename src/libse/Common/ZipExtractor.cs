@@ -75,7 +75,7 @@ namespace Nikse.SubtitleEdit.Core.Common
         // Static CRC32 Table
         private static UInt32[] CrcTable;
         // Default filename encoder
-        private static Encoding DefaultEncoding = Encoding.GetEncoding(437);
+        private static readonly Encoding DefaultEncoding = Encoding.UTF8;
 
         #endregion Private fields
 
