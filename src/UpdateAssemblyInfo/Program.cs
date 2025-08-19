@@ -9,7 +9,7 @@ using System.Xml;
 
 namespace UpdateAssemblyInfo
 {
-    internal class Program
+    internal sealed class Program
     {
         private static readonly Regex LongGitTagRegex; // e.g.: 3.4.8-226-g7037fef
         private static readonly Regex ShortGitTagRegex; // e.g.: 3.4-226-g7037fef
@@ -36,7 +36,7 @@ namespace UpdateAssemblyInfo
 
         private const int UnknownBuild = 9999;
 
-        private class VersionInfo : IComparable<VersionInfo>, IEquatable<VersionInfo>
+        private sealed class VersionInfo : IComparable<VersionInfo>, IEquatable<VersionInfo>
         {
             private int Major { get; }
             private int Minor { get; }
@@ -460,7 +460,7 @@ namespace UpdateAssemblyInfo
             yaml = SetVariable(yaml, "ReleaseDate", DateTime.Now.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)); //ReleaseDate: 2022-08-13
             yaml = SetVariable(yaml, "InstallerUrl", $"https://github.com/SubtitleEdit/subtitleedit/releases/download/{version.ShortVersion}/SubtitleEdit-{version.ShortVersion}-Setup.exe"); //InstallerUrl: https://github.com/SubtitleEdit/subtitleedit/releases/download/3.6.7/SubtitleEdit-3.6.7-Setup.exe
             yaml = SetVariable(yaml, "InstallerSha256", sha256Hash); //InstallerSha256: 66F2BEFD07E2295EE606BC02A4EAACB1E0D2DEBE42B4D167AE45C5CC76F5E9A3
-            File.WriteAllText(installer, yaml.TrimEnd()+ Environment.NewLine + Environment.NewLine);
+            File.WriteAllText(installer, yaml.TrimEnd() + Environment.NewLine + Environment.NewLine);
 
             var locale = Path.Combine(dir, "Nikse.SubtitleEdit.locale.en-US.yaml");
             yaml = File.ReadAllText(locale);
@@ -487,18 +487,14 @@ namespace UpdateAssemblyInfo
             {
                 return "TODO: fix sha 256 hash";
             }
-
-            using (var sha256Hash = SHA256.Create())
+            var bytes = SHA256.HashData(File.ReadAllBytes(exe));
+            var builder = new StringBuilder();
+            for (var i = 0; i < bytes.Length; i++)
             {
-                var bytes = sha256Hash.ComputeHash(File.ReadAllBytes(exe));
-                var builder = new StringBuilder();
-                for (var i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("X2", CultureInfo.InvariantCulture));
-                }
-
-                return builder.ToString();
+                builder.Append(bytes[i].ToString("X2", CultureInfo.InvariantCulture));
             }
+
+            return builder.ToString();
         }
 
         private static string SetVariable(string txt, string targetVariable, string targetValue)
