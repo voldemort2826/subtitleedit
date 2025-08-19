@@ -1,11 +1,11 @@
-﻿using Nikse.SubtitleEdit.Core.Common;
-using Nikse.SubtitleEdit.Core.Enums;
-using Nikse.SubtitleEdit.Logic;
-using System;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Controls.Interfaces;
-using System.ComponentModel;
+using Nikse.SubtitleEdit.Core.Common;
+using Nikse.SubtitleEdit.Core.Enums;
+using Nikse.SubtitleEdit.Logic;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -569,11 +569,7 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
         #region LiveSpellCheck
-
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-
-        #region LiveSpellCheck
-
         public int CurrentLineIndex
         {
             get
