@@ -11,10 +11,15 @@ namespace Nikse.SubtitleEdit.Forms
         public bool StartFromVideoPosition { get; set; }
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DeleteAll { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DeleteForward { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int BlockSize { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int VolumeMinimum { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int VolumeMaximum { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DefaultMilliseconds { get; set; }
 
         public WaveformGenerateTimeCodes()
