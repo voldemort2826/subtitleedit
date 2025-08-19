@@ -18,13 +18,7 @@
         <PackageReleaseNotes>SE 4.0.13</PackageReleaseNotes>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
-        <DefineConstants>WINDOWS7_COMPATIBLE</DefineConstants>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
-        <DefineConstants>NET9_COMPATIBLE</DefineConstants>
+        <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">

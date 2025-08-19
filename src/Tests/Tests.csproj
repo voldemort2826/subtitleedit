@@ -5,14 +5,13 @@
         <LangVersion>13.0</LangVersion>
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
-        <DefineConstants>WINDOWS7_COMPATIBLE</DefineConstants>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
-        <DefineConstants>NET9_COMPATIBLE</DefineConstants>
-    </PropertyGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+        <Reference Include="System.Windows.Forms" />
+    </ItemGroup>
 
     <ItemGroup>
         <Content Include="Files\auto_detect_Danish.srt">
@@ -79,10 +78,6 @@
     <ItemGroup>
         <ProjectReference Include="..\libse\LibSE.csproj" />
         <ProjectReference Include="..\ui\SubtitleEdit.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Reference Include="System.Windows.Forms" />
     </ItemGroup>
 
     <ItemGroup>
