@@ -16,13 +16,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
 using Timer = System.Windows.Forms.Timer;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Translate
 {
     public sealed partial class AutoTranslate : Form
     {
         public Subtitle TranslatedSubtitle { get; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TwoLetterIsoSource { get; internal set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TwoLetterIsoTarget { get; internal set; }
 
         private readonly Subtitle _subtitle;

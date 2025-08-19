@@ -5,6 +5,7 @@ using System;
 using System.Globalization;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Ocr
 {
@@ -79,7 +80,9 @@ namespace Nikse.SubtitleEdit.Forms.Ocr
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string NewSource { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string NewTarget { get; set; }
 
         internal void Initialize(string languageId, string hunspellName, string source)

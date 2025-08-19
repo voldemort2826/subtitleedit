@@ -116,6 +116,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Color _foreColor;
         [Category("ToolStripNikseSeparator"), Description("Gets or sets the foreground color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Color ForeColor
         {
             get => _foreColor;

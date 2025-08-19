@@ -5,12 +5,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Options
 {
     public sealed partial class DoNotBreakAfterListNew : Form
     {
         private readonly List<CultureInfo> _languages = new List<CultureInfo>();
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public CultureInfo ChosenLanguage { get; set; }
 
         public DoNotBreakAfterListNew()

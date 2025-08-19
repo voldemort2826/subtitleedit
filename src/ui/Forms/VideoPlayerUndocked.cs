@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -23,6 +24,7 @@ namespace Nikse.SubtitleEdit.Forms
         private int _mouseLastX = -1;
         private int _mouseLastY = -1;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool RedockOnFullscreenEnd { get; set; }
 
         public Panel PanelContainer => panelContainer;
@@ -243,6 +245,7 @@ namespace Nikse.SubtitleEdit.Forms
             timer1.Start();
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal bool IsFullscreen { get; set; }
 
         internal void NoFullscreen()

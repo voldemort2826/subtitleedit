@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -30,6 +31,7 @@ namespace Nikse.SubtitleEdit.Forms
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Subtitle Subtitle { get; set; }
         public int TotalFixes { get; private set; }
         private readonly LanguageStructure.RemoveTextFromHearImpaired _language;

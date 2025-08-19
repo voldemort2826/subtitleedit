@@ -104,71 +104,83 @@ namespace Nikse.SubtitleEdit.Controls
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public NikseComboBox ComboBox => Control as NikseComboBox;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedIndex
         {
             get => ComboBox.SelectedIndex;
             set => ComboBox.SelectedIndex = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string SelectedText
         {
             get => ComboBox.SelectedText;
             set => ComboBox.SelectedText = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public ComboBoxStyle DropDownStyle
         {
             get => ComboBox.DropDownStyle;
             set => ComboBox.DropDownStyle = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DropDownHeight
         {
             get => ComboBox.DropDownHeight;
             set => ComboBox.DropDownHeight = value;
         }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DropDownWidth
         {
             get => ComboBox.DropDownWidth;
             set => ComboBox.DropDownWidth = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColor
         {
             get => ComboBox.ButtonForeColor;
             set => ComboBox.ButtonForeColor = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorOver
         {
             get => ComboBox.ButtonForeColorOver;
             set => ComboBox.ButtonForeColorOver = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorDown
         {
             get => ComboBox.ButtonForeColorDown;
             set => ComboBox.ButtonForeColorDown = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColor
         {
             get => ComboBox.BorderColor;
             set => ComboBox.BorderColor = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BackColorDisabled
         {
             get => ComboBox.BackColorDisabled;
             set => ComboBox.BackColorDisabled = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Color BackColor
         {
             get => ComboBox.BorderColor;
             set => ComboBox.BorderColor = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public object SelectedItem
         {
             get => ComboBox.SelectedItem;
@@ -184,6 +196,7 @@ namespace Nikse.SubtitleEdit.Controls
                 SetStyle(ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
             }
 
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             public ToolStripNikseComboBox Owner { get; set; }
         }
 

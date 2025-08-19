@@ -3,13 +3,16 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Assa
 {
     public partial class ChooseAssaFontName : Form
     {
         private readonly List<AssaAttachmentFont> _attachments;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FontName { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public AssaAttachmentFont FontAttachment { get; set; }
 
         public ChooseAssaFontName(List<AssaAttachmentFont> attachments)

@@ -7,12 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class DownloadFfmpeg : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FFmpegPath { get; internal set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AutoClose { get; internal set; }
         private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly string _title;

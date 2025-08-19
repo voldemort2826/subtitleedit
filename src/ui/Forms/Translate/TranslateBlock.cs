@@ -5,12 +5,14 @@ using System.Drawing;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Common;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Translate
 {
     public sealed partial class TranslateBlock : Form
     {
         private readonly CopyPasteBlock _sourceBlock;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TargetText { get; set; }
 
         public TranslateBlock(CopyPasteBlock source, string title, bool autoCopy)

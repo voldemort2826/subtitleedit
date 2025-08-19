@@ -3,6 +3,7 @@ using Nikse.SubtitleEdit.Logic;
 using Nikse.SubtitleEdit.Logic.Ocr.Binary;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Ocr
 {
@@ -21,6 +22,7 @@ namespace Nikse.SubtitleEdit.Forms.Ocr
             UiUtil.FixLargeFonts(this, buttonOK);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public BinaryOcrBitmap ExpandedMatch { get; set; }
 
         private List<VobSubOcr.CompareMatch> _matches;

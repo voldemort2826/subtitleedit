@@ -20,6 +20,7 @@ namespace Nikse.SubtitleEdit.Controls
         private bool _dirty;
 
         [Category("NikseUpDown"), Description("Gets or sets the default value in textBox"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public decimal Value
         {
             get => _value;
@@ -48,6 +49,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private int _decimalPlaces;
         [Category("NikseUpDown"), Description("Gets or sets the decimal places (max 4)")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DecimalPlaces
         {
             get => _decimalPlaces;
@@ -73,6 +75,7 @@ namespace Nikse.SubtitleEdit.Controls
         private bool _thousandsSeparator;
 
         [Category("NikseUpDown"), Description("Gets or sets the thousand seperator")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ThousandsSeparator
         {
             get => _thousandsSeparator;
@@ -100,6 +103,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Brush _buttonForeColorBrush;
         [Category("NikseUpDown"), Description("Gets or sets the button foreground color"),
          RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColor
         {
             get => _buttonForeColor;
@@ -118,6 +122,7 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Font Font
         {
             get => base.Font;
@@ -136,6 +141,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _buttonForeColorOver;
         private Brush _buttonForeColorOverBrush;
         [Category("NikseUpDown"), Description("Gets or sets the button foreground mouse over color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorOver
         {
             get => _buttonForeColorOver;
@@ -157,6 +163,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _buttonForeColorDown;
         private Brush _buttonForeColorDownBrush;
         [Category("NikseUpDown"), Description("Gets or sets the button foreground mouse down color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorDown
         {
             get => _buttonForeColorDown;
@@ -177,6 +184,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Color _borderColor;
         [Category("NikseUpDown"), Description("Gets or sets the border color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColor
         {
             get => _borderColor;
@@ -198,6 +206,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _backColorDisabled;
         [Category("NikseUpDown"), Description("Gets or sets the button foreground color"),
          RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BackColorDisabled
         {
             get => _backColorDisabled;
@@ -215,6 +224,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Color _borderColorDisabled;
         [Category("NikseUpDown"), Description("Gets or sets the disabled border color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColorDisabled
         {
             get => _borderColorDisabled;
@@ -583,6 +593,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private const int ButtonsWidth = 13;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool Enabled
         {
             get => base.Enabled;

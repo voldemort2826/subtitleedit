@@ -2,11 +2,13 @@
 using Nikse.SubtitleEdit.Logic;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class UnknownSubtitle : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ImportPlainText { get; set; }
 
         public UnknownSubtitle()

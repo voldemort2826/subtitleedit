@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Ocr
 {
@@ -528,6 +529,7 @@ namespace Nikse.SubtitleEdit.Forms.Ocr
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ChangesMade { get; set; }
 
         private void saveImageAsToolStripMenuItem_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Drawing.Text;
 using System.Globalization;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Settings;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -57,7 +58,9 @@ namespace Nikse.SubtitleEdit.Controls
         public bool IsOriginalTextColumnVisible => ColumnIndexTextOriginal >= 0;
         private string _lineSeparatorString = " || ";
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string SubtitleFontName { get; set; } = "Tahoma";
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool SubtitleFontBold { get; set; }
         public int SubtitleFontSize { get; set; } = 8;
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -26,6 +27,7 @@ namespace Nikse.SubtitleEdit.Forms
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string LanguageCode { get; set; }
 
         private static readonly List<LanguageItem> Languages = new List<LanguageItem>

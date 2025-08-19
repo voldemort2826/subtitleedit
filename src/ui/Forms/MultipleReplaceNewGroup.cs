@@ -1,6 +1,7 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -24,6 +25,7 @@ namespace Nikse.SubtitleEdit.Forms
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string GroupName { get; set; }
 
         private void buttonCancel_Click(object sender, EventArgs e)

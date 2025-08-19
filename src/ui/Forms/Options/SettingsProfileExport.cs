@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Options
 {
     public sealed partial class SettingsProfileExport : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<RulesProfile> ExportedProfiles { get; set; }
 
         public SettingsProfileExport(List<RulesProfile> profiles)

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Common;
 using Nikse.SubtitleEdit.Logic;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -20,12 +21,14 @@ namespace Nikse.SubtitleEdit.Controls
         private int _rightRedZone = 7;
         private int _rightGreenZone = 12;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float FrameRate
         {
             get => _frameRate;
             set { _frameRate = value; Invalidate(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string PreviewText
         {
             get => _previewText;

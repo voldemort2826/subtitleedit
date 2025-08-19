@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -204,6 +205,7 @@ namespace Nikse.SubtitleEdit.Forms
             buttonCancel.Text = _languageGeneral.Ok;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Language
         {
             get
@@ -224,6 +226,7 @@ namespace Nikse.SubtitleEdit.Forms
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool BatchMode { get; set; }
 
         public void RunBatch(Subtitle subtitle, SubtitleFormat format, Encoding encoding, string language)

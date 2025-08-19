@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -18,6 +19,7 @@ namespace Nikse.SubtitleEdit.Forms
 
         private bool _abort = false;
         private readonly List<Paragraph> _paragraphs;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<AudioClip> AudioClips { get; set; }
         private readonly string _videoFileName;
         private readonly int _audioTrackNumber;

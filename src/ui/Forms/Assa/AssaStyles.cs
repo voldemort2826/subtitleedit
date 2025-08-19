@@ -15,6 +15,7 @@ using System.Text;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Settings;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Assa
 {
@@ -33,6 +34,7 @@ namespace Nikse.SubtitleEdit.Forms.Assa
         }
 
         private readonly Subtitle _subtitle;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<NameEdit> RenameActions { get; set; }
         private readonly Timer _previewTimer = new Timer();
         private string _startName;

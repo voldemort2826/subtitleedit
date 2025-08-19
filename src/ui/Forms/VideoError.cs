@@ -5,11 +5,13 @@ using Nikse.SubtitleEdit.Logic.VideoPlayers;
 using System;
 using System.Text;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public partial class VideoError : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool VideoPlayerInstalled { get; set; }
 
         public VideoError()

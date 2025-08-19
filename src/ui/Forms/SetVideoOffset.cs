@@ -6,12 +6,15 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class SetVideoOffset : PositionAndSizeForm
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool FromCurrentVideoPosition { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DoNotaddVideoOffsetToTimeCodes { get; set; }
         public bool Reset { get; set; }
 

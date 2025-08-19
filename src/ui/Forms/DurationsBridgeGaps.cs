@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -16,6 +17,7 @@ namespace Nikse.SubtitleEdit.Forms
         private readonly Timer _refreshTimer = new Timer();
         public Subtitle FixedSubtitle { get; private set; }
         public int FixedCount { get; private set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int MinMsBetweenLines
         {
             get => (int)numericUpDownMinMsBetweenLines.Value;

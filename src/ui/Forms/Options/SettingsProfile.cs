@@ -10,11 +10,13 @@ using System.Text;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Settings;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Options
 {
     public sealed partial class SettingsProfile : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<RulesProfile> RulesProfiles { get; set; }
         private bool _editOn;
 

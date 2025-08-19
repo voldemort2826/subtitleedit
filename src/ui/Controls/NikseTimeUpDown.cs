@@ -28,6 +28,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private bool _forceHHMMSSFF;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool UseVideoOffset { get; set; }
 
         private static readonly char[] SplitChars = GetSplitChars();
@@ -70,6 +71,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Brush _buttonForeColorBrush;
         [Category("NikseTimeUpDown"), Description("Gets or sets the button foreground color"),
          RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColor
         {
             get => _buttonForeColor;
@@ -90,6 +92,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _buttonForeColorOver;
         private Brush _buttonForeColorOverBrush;
         [Category("NikseTimeUpDown"), Description("Gets or sets the button foreground mouse over color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorOver
         {
             get => _buttonForeColorOver;
@@ -111,6 +114,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _buttonForeColorDown;
         private Brush _buttonForeColorDownBrush;
         [Category("NikseTimeUpDown"), Description("Gets or sets the button foreground mouse down color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color ButtonForeColorDown
         {
             get => _buttonForeColorDown;
@@ -131,6 +135,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Color _borderColor;
         [Category("NikseTimeUpDown"), Description("Gets or sets the border color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColor
         {
             get => _borderColor;
@@ -150,6 +155,7 @@ namespace Nikse.SubtitleEdit.Controls
         private Color _backColorDisabled;
         [Category("NikseTimeUpDown"), Description("Gets or sets the button foreground color"),
          RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BackColorDisabled
         {
             get => _backColorDisabled;
@@ -167,6 +173,7 @@ namespace Nikse.SubtitleEdit.Controls
 
         private Color _borderColorDisabled;
         [Category("NikseTimeUpDown"), Description("Gets or sets the disabled border color"), RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColorDisabled
         {
             get => _borderColorDisabled;
@@ -383,6 +390,7 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
         [RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TimeCode TimeCode
         {
             get
@@ -709,6 +717,7 @@ namespace Nikse.SubtitleEdit.Controls
         private const int ButtonsWidth = 13;
 
         [RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool Enabled
         {
             get => base.Enabled;
@@ -725,6 +734,7 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
         [RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new int Height
         {
             get => base.Height;
@@ -741,6 +751,7 @@ namespace Nikse.SubtitleEdit.Controls
         }
 
         [RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new int Width
         {
             get => base.Width;

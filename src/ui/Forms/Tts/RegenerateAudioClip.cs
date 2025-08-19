@@ -4,11 +4,13 @@ using Nikse.SubtitleEdit.Logic.VideoPlayers;
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Tts
 {
     public sealed partial class RegenerateAudioClip : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TextToSpeech.FileNameAndSpeedFactor FileNameAndSpeedFactor { get; set; }
 
         private readonly TextToSpeech _textToSpeech;

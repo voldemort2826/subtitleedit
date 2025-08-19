@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Controls.Interfaces;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -11,6 +12,7 @@ namespace Nikse.SubtitleEdit.Controls
         private const int WM_PAINT = 0x0f;
 
         Color _focusedColor = Color.FromArgb(0, 120, 215);
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color FocusedColor
         {
             get => _focusedColor;

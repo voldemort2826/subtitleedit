@@ -6,6 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.ShotChanges
 {
@@ -20,7 +21,9 @@ namespace Nikse.SubtitleEdit.Forms.ShotChanges
             public List<double> ShotChanges { get; set; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<ShotChangeItem> ShotChangeFiles { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<double> ShotChanges { get; set; }
 
         public ImportShotChangesFromSe()

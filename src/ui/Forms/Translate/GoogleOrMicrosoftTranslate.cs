@@ -8,11 +8,13 @@ using Nikse.SubtitleEdit.Core.Common;
 using Nikse.SubtitleEdit.Core.Translate;
 using Nikse.SubtitleEdit.Forms.Options;
 using Nikse.SubtitleEdit.Logic;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Translate
 {
     public sealed partial class GoogleOrMicrosoftTranslate : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TranslatedText { get; set; }
 
         private IAutoTranslator _googleTranslationService;

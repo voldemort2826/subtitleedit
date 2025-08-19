@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Common;
 using System;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Assa
 {
@@ -9,6 +10,7 @@ namespace Nikse.SubtitleEdit.Forms.Assa
     {
         private Subtitle _subtitle;
         private Paragraph _p;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Layer { get; set; }
 
         public SetLayer(Subtitle subtitle, Paragraph p)

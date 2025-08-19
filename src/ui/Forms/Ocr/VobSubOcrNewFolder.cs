@@ -4,11 +4,13 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Ocr
 {
     public sealed partial class VobSubOcrNewFolder : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FolderName { get; set; }
         private readonly bool _vobSub;
         public VobSubOcrNewFolder(bool vobsub)

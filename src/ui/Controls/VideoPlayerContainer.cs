@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -65,6 +66,7 @@ namespace Nikse.SubtitleEdit.Controls
         private string _subtitleText = string.Empty;
         private VideoPlayer _videoPlayer;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float FontSizeFactor { get; set; }
 
         private static int GetSubtitlesHeight()
@@ -84,6 +86,7 @@ namespace Nikse.SubtitleEdit.Controls
             return subtitlesHeight;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public VideoPlayer VideoPlayer
         {
             get => _videoPlayer;

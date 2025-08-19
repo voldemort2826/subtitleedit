@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class ExportCustomTextFormat : Form
     {
         public const string EnglishDoNotModify = "[Do not modify]";
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FormatOk { get; set; }
         private static readonly Regex CurlyCodePattern = new Regex("{\\d+[,:]*[A-Z\\d-]*}", RegexOptions.Compiled);
 

@@ -12,12 +12,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class GenerateTransparentVideoWithSubtitles : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool BatchMode { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string BatchInfo { get; set; }
         public string VideoFileName { get; private set; }
         public long MillisecondsEncoding { get; private set; }

@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -17,7 +18,9 @@ namespace Nikse.SubtitleEdit.Forms
         private readonly string _title;
         private readonly string _videoFileName;
         private bool _batchConvert;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string LogMessage { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string CurrentFormatName { get; set; }
 
         public ExportCustomText(Subtitle subtitle, Subtitle original, string title, string videoFileName)

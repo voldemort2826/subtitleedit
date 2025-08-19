@@ -6,12 +6,15 @@ using System.Text;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Common;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class InterjectionsEditList : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> Interjections { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> SkipList { get; set; }
 
         public InterjectionsEditList(List<string> interjections, List<string> skipList)

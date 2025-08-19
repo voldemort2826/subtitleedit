@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.VTT
 {
@@ -14,7 +15,9 @@ namespace Nikse.SubtitleEdit.Forms.VTT
     {
         private readonly List<WebVttStyle> _styles;
         private readonly bool _export;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<WebVttStyle> ImportExportStyles { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FileName { get; set; }
 
         public WebVttImportExport(List<WebVttStyle> styles, string fileName = null)

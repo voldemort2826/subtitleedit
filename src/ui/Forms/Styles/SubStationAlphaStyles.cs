@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Styles
 {
@@ -31,6 +32,7 @@ namespace Nikse.SubtitleEdit.Forms.Styles
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<NameEdit> RenameActions { get; set; }
         private string _startName;
         private string _editedName;

@@ -19,11 +19,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Tts
 {
     public sealed partial class TextToSpeech : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Subtitle EditedSubtitle { get; set; }
 
         private readonly Subtitle _subtitle;

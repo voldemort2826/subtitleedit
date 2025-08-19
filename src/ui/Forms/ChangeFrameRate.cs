@@ -4,12 +4,15 @@ using System.Globalization;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Controls;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class ChangeFrameRate : PositionAndSizeForm
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double OldFrameRate { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double NewFrameRate { get; set; }
 
         public ChangeFrameRate()

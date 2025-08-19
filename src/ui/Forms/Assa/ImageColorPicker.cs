@@ -5,6 +5,7 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Assa
 {
@@ -15,6 +16,7 @@ namespace Nikse.SubtitleEdit.Forms.Assa
         private int _colorPickerX = -1;
         private int _colorPickerY = -1;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color Color { get; set; }
         public string HexColor => Utilities.ColorToHex(Color).ToUpper();
         public string AssaColor => AdvancedSubStationAlpha.GetSsaColorStringNoTransparency(Color);

@@ -4,6 +4,7 @@ using System;
 using System.Net;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Networking
 {
@@ -11,6 +12,7 @@ namespace Nikse.SubtitleEdit.Forms.Networking
     {
 
         private Logic.Networking.NikseWebServiceSession _networkSession;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FileName { get; set; }
 
         public NetworkJoin()

@@ -3,11 +3,13 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public partial class NuendoProperties : PositionAndSizeForm
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string CharacterListFile { get; set; }
 
         public NuendoProperties()

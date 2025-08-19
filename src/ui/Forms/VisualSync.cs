@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -32,7 +33,9 @@ namespace Nikse.SubtitleEdit.Forms
         private readonly Timer _timerHideSyncLabel = new Timer();
         private string _adjustInfo = string.Empty;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string VideoFileName { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int AudioTrackNumber { get; set; }
 
         public bool OkPressed { get; set; }

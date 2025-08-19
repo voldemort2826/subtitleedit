@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -61,6 +62,7 @@ namespace Nikse.SubtitleEdit.Forms
         }
 
         public static string PluginXmlFileUrl = "https://raw.github.com/SubtitleEdit/plugins/master/Plugins4.xml";
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool UpdateAll { get; set; }
 
         private static string GetPluginFolder()

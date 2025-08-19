@@ -12,11 +12,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.VTT
 {
     public sealed partial class WebVttStyleManager : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Header { get; set; }
         private readonly List<WebVttStyle> _webVttStyles;
         private readonly List<WebVttStyle> _originalWebVttStyles;

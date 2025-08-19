@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public partial class ConvertActor : PositionAndSizeForm
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Subtitle Subtitle { get; set; }
         private SubtitleFormat _subtitleFormat;
         private bool _loading = true;

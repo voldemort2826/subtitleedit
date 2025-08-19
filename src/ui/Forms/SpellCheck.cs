@@ -17,6 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -27,7 +28,9 @@ namespace Nikse.SubtitleEdit.Forms
         private string _wordSplitListLanguage;
         private string[] _wordSplitList;
         private string _currentAction;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SpellCheckAction Action { get; set; } = SpellCheckAction.Skip;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ChangeWord
         {
             get => textBoxWord.Text;

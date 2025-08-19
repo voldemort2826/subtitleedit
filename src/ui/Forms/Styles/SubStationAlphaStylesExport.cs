@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Styles
 {
@@ -16,6 +17,7 @@ namespace Nikse.SubtitleEdit.Forms.Styles
         private readonly List<SsaStyle> _stylesToExport;
         private readonly bool _isSubStationAlpha;
         private readonly SubtitleFormat _format;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> ExportedStyles { get; set; }
 
         public SubStationAlphaStylesExport(List<SsaStyle> stylesToExport, bool isSubStationAlpha, SubtitleFormat format)

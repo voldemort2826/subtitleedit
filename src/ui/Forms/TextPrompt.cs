@@ -1,11 +1,13 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class TextPrompt : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string InputText { get; set; }
 
         public TextPrompt(string title, string label, string initialText, int width = 275)

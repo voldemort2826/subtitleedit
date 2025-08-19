@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -18,7 +19,9 @@ namespace Nikse.SubtitleEdit.Forms
 
         public event EventHandler<InsertEventArgs> OnInsertClicked;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Input { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool IsOriginalActive { get; set; }
 
         private string Output { get; set; }

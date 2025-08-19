@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Settings;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Assa
 {
@@ -14,7 +15,9 @@ namespace Nikse.SubtitleEdit.Forms.Assa
         private readonly List<AssaStorageCategory> _storageCategories;
         private readonly List<SsaStyle> _currentFileStyles;
         private readonly Subtitle _subtitle;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Subtitle NewSubtitle { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SsaStyle NewStorageStyle { get; set; }
         public SsaStyle NewFileStyle { get; set; }
 

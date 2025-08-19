@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Options
 {
@@ -28,6 +29,7 @@ namespace Nikse.SubtitleEdit.Forms.Options
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string DefaultLanguages { get; set; }
         private readonly List<string> _defaultLanguageArray;
 

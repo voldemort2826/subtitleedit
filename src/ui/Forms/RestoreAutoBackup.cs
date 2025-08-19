@@ -10,6 +10,7 @@ using Nikse.SubtitleEdit.Core.SubtitleFormats;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
 using System.Threading;
 using Nikse.SubtitleEdit.Core.Settings;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -20,6 +21,7 @@ namespace Nikse.SubtitleEdit.Forms
         //2011-12-13_20-19-18_title
         private static readonly Regex RegexFileNamePattern = new Regex(@"^\d\d\d\d-\d\d-\d\d_\d\d-\d\d-\d\d", RegexOptions.Compiled);
         private string[] _files;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string AutoBackupFileName { get; set; }
         private static bool ShowAutoBackupError { get; set; }
 

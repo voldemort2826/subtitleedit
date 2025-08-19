@@ -1,6 +1,7 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -8,8 +9,10 @@ namespace Nikse.SubtitleEdit.Forms
     {
         private double _zoomFactor = 100;
         private readonly Bitmap _bmp;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AllowNext { get; set; }
         public bool NextPressed { get; private set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AllowPrevious { get; set; }
         public bool PreviousPressed { get; private set; }
 

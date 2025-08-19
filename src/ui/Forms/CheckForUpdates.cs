@@ -3,6 +3,7 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
 using CheckForUpdatesHelper = Nikse.SubtitleEdit.Logic.CheckForUpdatesHelper;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -13,6 +14,7 @@ namespace Nikse.SubtitleEdit.Forms
         private readonly bool _performCheckOnShown = true;
         private readonly Main _mainForm;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool UpdatePlugins { get; set; }
 
         public CheckForUpdates(Main mainForm)

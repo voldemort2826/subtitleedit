@@ -5,11 +5,13 @@ using System.Linq;
 using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Common;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class InterjectionsEditSkipList : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> SkipList { get; set; }
 
         public InterjectionsEditSkipList(List<string> skipList)

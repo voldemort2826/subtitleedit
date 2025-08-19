@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Tts
 {
     public sealed partial class ReviewAudioClips : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<int> SkipIndices { get; set; }
 
         private readonly Subtitle _subtitle;

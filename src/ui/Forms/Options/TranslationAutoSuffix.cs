@@ -3,11 +3,13 @@ using Nikse.SubtitleEdit.Logic;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Options
 {
     public sealed partial class TranslationAutoSuffix : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> Suffixes { get; set; }
 
         public TranslationAutoSuffix(List<string> suffixes)

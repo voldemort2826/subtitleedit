@@ -1,11 +1,13 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public partial class ImportFinalDraft : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> ChosenParagraphTypes { get; set; }
 
         public ImportFinalDraft(List<string> paragraphTypes)

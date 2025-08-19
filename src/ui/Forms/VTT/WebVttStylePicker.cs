@@ -3,11 +3,13 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.VTT
 {
     public sealed partial class WebVttStylePicker : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<WebVttStyle> ImportExportStyles { get; set; }
 
         public WebVttStylePicker(List<WebVttStyle> styles, Paragraph paragraph)

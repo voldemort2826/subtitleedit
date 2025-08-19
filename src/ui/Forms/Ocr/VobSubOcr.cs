@@ -259,9 +259,11 @@ namespace Nikse.SubtitleEdit.Forms.Ocr
         }
 
         public delegate void ProgressCallbackDelegate(string progress);
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public ProgressCallbackDelegate ProgressCallback { get; set; }
 
         private Main _main;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FileName { get; set; }
         private Subtitle _subtitle = new Subtitle();
         private List<CompareItem> _compareBitmaps;

@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Nikse.SubtitleEdit.Core.Forms;
 using System.Diagnostics;
 using System.Drawing.Imaging;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -74,7 +75,9 @@ namespace Nikse.SubtitleEdit.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int ClosenessForBorderSelection { get; set; } = 15;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float SpectrogramAlpha { get; set; } = 1.0f;
         public int WaveformAlpha { get; set; } = 255;
         private const int MinimumSelectionMilliseconds = 100;

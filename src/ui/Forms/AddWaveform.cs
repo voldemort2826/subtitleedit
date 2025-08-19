@@ -4,6 +4,7 @@ using Nikse.SubtitleEdit.Core.ContainerFormats.Mp4;
 using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -15,6 +16,7 @@ namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class AddWaveform : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int AudioTrackNumber { get; set; } = -1;
         public string SourceVideoFileName { get; private set; }
         private bool _cancel;

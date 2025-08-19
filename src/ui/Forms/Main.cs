@@ -93,6 +93,7 @@ namespace Nikse.SubtitleEdit.Forms
 
         private int _videoAudioTrackNumber = -1;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int VideoAudioTrackNumber
         {
             get => _videoAudioTrackNumber;

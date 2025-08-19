@@ -4,6 +4,7 @@ using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Text;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -11,6 +12,7 @@ namespace Nikse.SubtitleEdit.Forms
     public sealed partial class PacEncoding : Form
     {
         private const string PreviewChars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int CodePageIndex { get; set; }
 
         private readonly byte[] _previewBuffer;

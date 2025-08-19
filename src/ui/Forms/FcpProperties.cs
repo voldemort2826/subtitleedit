@@ -2,12 +2,15 @@
 using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public partial class FcpProperties : PositionAndSizeForm
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int FcpFontSize { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FcpFontName { get; set; }
 
         public FcpProperties()

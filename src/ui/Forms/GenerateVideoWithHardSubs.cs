@@ -13,6 +13,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -39,7 +40,9 @@ namespace Nikse.SubtitleEdit.Forms
         public long MillisecondsEncoding { get; private set; }
         private PreviewVideo _previewVideo;
         private readonly bool _initialFontOn;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool BatchMode { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string BatchInfo { get; set; }
         private readonly List<BatchVideoAndSub> _batchVideoAndSubList;
         private const int ListViewBatchSubItemIndexColumnVideoSize = 2;

@@ -1,6 +1,7 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Controls
 {
@@ -9,6 +10,7 @@ namespace Nikse.SubtitleEdit.Controls
         private readonly ListView _listView;
         private bool _hasMouseOver;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DoClose { get; set; }
 
         public NikseComboBoxPopUp(ListView listView, int selectedIndex, int x, int y)

@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class ChooseAudioTrack : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedTrack { get; set; }
 
         public ChooseAudioTrack(List<string> tracks, int selectedTrack)

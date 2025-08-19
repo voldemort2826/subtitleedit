@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using Nikse.SubtitleEdit.Logic;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
@@ -25,6 +26,7 @@ namespace Nikse.SubtitleEdit.Forms
 
         private bool _loading = true;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowVideoControls { get; set; }
 
         public LayoutPicker(int initialLayout, bool showVideoControls)

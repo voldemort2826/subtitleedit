@@ -1,11 +1,13 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class DialogDoNotShowAgain : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DoNoDisplayAgain { get; set; }
 
         public DialogDoNotShowAgain(string title, string text)

@@ -7,12 +7,15 @@ using Nikse.SubtitleEdit.Core.Common;
 using Nikse.SubtitleEdit.Core.Http;
 using Nikse.SubtitleEdit.Logic;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.Tts
 {
     public sealed partial class PiperDownload : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool AutoClose { get; internal set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ModelUrl { get; internal set; }
         public string ModelFileName { get; internal set; }
         public string PiperPath { get; set; }

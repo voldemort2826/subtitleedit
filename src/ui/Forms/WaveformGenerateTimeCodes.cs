@@ -1,12 +1,15 @@
 ﻿using Nikse.SubtitleEdit.Logic;
 using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms
 {
     public sealed partial class WaveformGenerateTimeCodes : Form
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool StartFromVideoPosition { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool DeleteAll { get; set; }
         public bool DeleteForward { get; set; }
         public int BlockSize { get; set; }

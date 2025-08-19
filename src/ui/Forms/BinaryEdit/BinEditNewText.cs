@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using static Nikse.SubtitleEdit.Forms.ExportPngXml;
 using MessageBox = Nikse.SubtitleEdit.Forms.SeMsgBox.MessageBox;
+using System.ComponentModel;
 
 namespace Nikse.SubtitleEdit.Forms.BinaryEdit
 {
@@ -15,6 +16,7 @@ namespace Nikse.SubtitleEdit.Forms.BinaryEdit
         private readonly bool _loading;
         private readonly Dictionary<string, int> _lineHeights;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Bitmap Bitmap { get; set; }
 
         public BinEditNewText(string text)
